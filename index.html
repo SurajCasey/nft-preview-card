@@ -14,12 +14,15 @@
 <body>
   <div class="container">
     <div class="image">
-      <img src="./images/image-equilibrium.jpg" alt="Equilibrium image" class="equilibrium">
+      <div class="active-image">
+        <img src="./images/icon-view.svg" alt="eye-view">
+      </div>
+      <img src="./images/image-equilibrium.jpg" alt="Equilibrium image" class="equilibrium" id="mainImage">
     </div>
 
     <div class="content">
       <div class="content-header">
-        <h1>
+        <h1 id="title">
           Equilibrium #3429
         </h1>
 
@@ -45,7 +48,7 @@
       <div class="footer">
         <img src="./images/image-avatar.png" alt="profile image" class="profile">
         <div class="creator">
-          Creation of <span>Jules Wyvern</span>
+          Creation of <span id="creatorSpan">Jules Wyvern</span>
         </div>
       </div>
     </div>
@@ -61,4 +64,23 @@
     Coded by <a href="#">Suraj Khatri</a>.
   </div>
 </body>
+<script>
+  // adding selector
+  const mainImage = document.getElementById("mainImage");
+  const activeImage = document.querySelector('.active-image');
+  const title = document.getElementById("title");
+  const creatorSpan = document.getElementById("creatorSpan");
+
+  mainImage.addEventListener("click", () => {
+    activeImage.style.display = "flex";
+    title.style.color = "hsl(178, 100%, 50%)";
+    creatorSpan.style.color = "hsl(178, 100%, 50%)";
+  })
+
+  activeImage.addEventListener("click", ()=>{
+    activeImage.style.display = "none";
+    title.style.color = "white";
+    creatorSpan.style.color = "white";
+  })
+</script>
 </html>
