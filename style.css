@@ -128,16 +128,3 @@ body{
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
-
-/* for toggle */
-.active-image{
-    display: none;
-}
-
-.active-image.show{
-    display: flex;
-}
-
-.highlight{
-    color: hsl(178, 100%, 50%) !important;
-}
